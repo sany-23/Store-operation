@@ -1,3 +1,6 @@
+# Overview
+This is a small project on emulating a store in customer's PoV. Technologies used: Angular, Material-UI, json-server.
+
 # EcomWeb
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
