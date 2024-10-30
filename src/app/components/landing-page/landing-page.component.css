@@ -1,0 +1,106 @@
+/* Parallax Background */
+.parallax-background {
+  background: url("https://www.slashgear.com/img/gallery/12-important-things-to-consider-before-buying-a-gaming-pc/intro-1654286079.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.parallax-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay for better readability */
+  z-index: 1;
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Features Section */
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 50px 20px;
+  background: #f8f9fa;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+}
+
+/* Carousel Section */
+.carousel {
+  margin-top: 50px;
+}
+
+.carousel-inner img {
+  height: 60vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Animations */
+.animated-title {
+  font-size: 48px;
+  animation: fadeInDown 1s;
+  font-family: "Poppins";
+  font-weight: bold;
+}
+
+.animated-subtitle {
+  font-size: 24px;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.5s;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

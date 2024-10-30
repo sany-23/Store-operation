@@ -1,0 +1,32 @@
+.filter-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.toast-container {
+  z-index: 1080;
+}
+
+.toast {
+  opacity: 1;
+}
+
+.product-image {
+  max-width: 100px;
+  height: auto;
+}
+
+.custom-bg {
+  background-color: rgb(70, 77, 74);
+}

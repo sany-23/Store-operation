@@ -1,0 +1,60 @@
+<div class="table-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Product Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Product Name </th>
+      <td mat-cell *matCellDef="let item"> {{ item.name }} </td>
+    </ng-container>
+
+    <!-- Price Column -->
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Price </th>
+      <td mat-cell *matCellDef="let item"> ${{ item.price }} </td>
+    </ng-container>
+
+    <!-- Quantity Column -->
+    <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef> Quantity </th>
+      <td mat-cell *matCellDef="let item"> {{ item.quantity }} </td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let item">
+        <button mat-button color="warn" (click)="removeFromCart(item)">Remove</button>
+      </td>
+    </ng-container>
+
+    <!-- Header and Row Declarations -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <!-- Cart Summary -->
+  <div class="cart-summary">
+    <p><strong>Total Items:</strong> {{ totalItems }}</p>
+    <p><strong>Total Price:</strong> ${{ totalPrice.toFixed(2) }}</p>
+  </div>
+
+  
+</div>
+<!-- Checkout Button -->
+  <div class="checkout-container">
+    <button mat-raised-button color="primary" (click)="checkout()" [disabled]="totalItems === 0">Checkout</button>
+  </div>
+
+
+<!-- Toast Notification -->
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1080;">
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" [class.show]="toastVisible">
+    <div class="toast-header">
+      <strong class="me-auto">Notification</strong>
+      <button type="button" class="btn-close" aria-label="Close" (click)="toastVisible = false"></button>
+    </div>
+    <div class="toast-body">
+      Purchase completed
+    </div>
+  </div>
+</div>

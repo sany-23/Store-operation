@@ -1,0 +1,168 @@
+<div class="content-container">
+  <div class="filter-container">
+    <!-- Filter by product name -->
+    <mat-form-field appearance="outline">
+      <mat-label>Search Products</mat-label>
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="Enter product name"
+        class="border-light"
+      />
+    </mat-form-field>
+  </div>
+
+  <!-- Product Table -->
+  <div class="table-container">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+      <!-- Image Column -->
+      <ng-container matColumnDef="image">
+        <th mat-header-cell *matHeaderCellDef>Image</th>
+        <td mat-cell *matCellDef="let product">
+          <img
+            [src]="product.imageUrl"
+            alt="{{ product.name }}"
+            class="product-image"
+          />
+        </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+        <td mat-cell *matCellDef="let product">
+          <a href="javascript:void(0)" (click)="openProductModal(product)">{{
+            product.name
+          }}</a>
+        </td>
+      </ng-container>
+
+      <!-- Category Column -->
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>
+        <td mat-cell *matCellDef="let product">{{ product.category }}</td>
+      </ng-container>
+
+      <!-- Price Column -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Price</th>
+        <td mat-cell *matCellDef="let product">${{ product.price }}</td>
+      </ng-container>
+
+      <!-- Stock Column -->
+      <!-- <ng-container matColumnDef="stock">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Stock </th>
+      <td mat-cell *matCellDef="let product"> {{ product.stock }} </td>
+    </ng-container> -->
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let product">
+          <button
+            mat-button
+            color="primary"
+            (click)="openProductModal(product)"
+          >
+            View Details
+          </button>
+        </td>
+      </ng-container>
+
+      <!-- Header and Row Declarations -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <!-- Paginator -->
+    <mat-paginator
+      [pageSize]="5"
+      [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons
+    ></mat-paginator>
+  </div>
+
+  <!-- Modal for Product Details -->
+  <div
+    class="modal fade"
+    id="productModal"
+    tabindex="-1"
+    aria-labelledby="productModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel">
+            {{ selectedProduct?.name }}
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="w-50">
+            <img
+              [src]="selectedProduct?.imageUrl"
+              alt="{{ selectedProduct?.name }}"
+              class="img-fluid mb-3 w-100"
+            />
+          </div>
+          <p><strong>Category:</strong> {{ selectedProduct?.category }}</p>
+          <p><strong>Price:</strong> ${{ selectedProduct?.price }}</p>
+          <p><strong>Stock:</strong> {{ selectedProduct?.stock }}</p>
+          <p>
+            <strong>Description:</strong> {{ selectedProduct?.description }}
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="addToCart(selectedProduct)"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div
+    class="toast-container position-fixed top-0 end-0 p-3"
+    style="z-index: 1080"
+  >
+    <div
+      class="toast"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      [class.show]="toastVisible"
+    >
+      <div class="toast-header">
+        <strong class="me-auto">Notification</strong>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="toastVisible = false"
+        ></button>
+      </div>
+      <div class="toast-body">Product added to the cart successfully!</div>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+<br />

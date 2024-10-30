@@ -1,0 +1,238 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Intel 14th Gen Core i9 14900K",
+      "description": "High-performance CPU with 24 cores and 32 threads",
+      "price": 499.99,
+      "stock": 15,
+      "category": "CPU",
+      "imageUrl": "intel-core-i9-14900K.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 2,
+      "name": "AMD Ryzen 9 9950X",
+      "description": "Powerful CPU with 16 cores and 32 threads",
+      "price": 549.99,
+      "stock": 20,
+      "category": "CPU",
+      "imageUrl": "ryzen9-9950X.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 3,
+      "name": "ASUS TUF Gaming GeForce RTX 4090 OC Edition 24GB GDDR6X",
+      "description": "High-end graphics card with 24GB GDDR6X memory",
+      "price": 699.99,
+      "stock": 10,
+      "category": "GPU",
+      "imageUrl": "rtx-4090-oc.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 4,
+      "name": "Sapphire NITRO+ AMD Radeon RX 6950 XT PURE 16GB GDDR6",
+      "description": "High-performance GPU with 16GB GDDR6 memory",
+      "price": 649.99,
+      "stock": 8,
+      "category": "GPU",
+      "imageUrl": "radeon-rx-6950-xt.jpg",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 5,
+      "name": "TEAM XTREEM ARGB 48GB (2x24GB) 8000MHz DDR5",
+      "description": "High-speed RAM with 8000MHz frequency",
+      "price": 349.99,
+      "stock": 30,
+      "category": "Memory",
+      "imageUrl": "team-xtreem-argb-48gb.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 6,
+      "name": "Seagate FireCuda 530 2TB Gen4 M.2 2280 PCIe NVMe",
+      "description": "Fast NVMe SSD for quick load times and transfers",
+      "price": 129.99,
+      "stock": 25,
+      "category": "Storage",
+      "imageUrl": "seagate-firecuda-530-2tb.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 7,
+      "name": "Seagate Exos X18 18TB 7200rpm",
+      "description": "Reliable hard disk drive for large storage needs",
+      "price": 59.99,
+      "stock": 40,
+      "category": "Storage",
+      "imageUrl": "seagate-exos-X18-18tb.jpg",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 8,
+      "name": "ASUS ProArt X870E-CREATOR WiFi",
+      "description": "ATX motherboard compatible with AMD Ryzen processors",
+      "price": 109.99,
+      "stock": 12,
+      "category": "Motherboard",
+      "imageUrl": "proart-x870e-creator-wifi.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 9,
+      "name": "ASUS ROG MAXIMUS Z790",
+      "description": "High-end motherboard for Intel processors with PCIe 4.0 support",
+      "price": 349.99,
+      "stock": 7,
+      "category": "Motherboard",
+      "imageUrl": "rog-maximus-z790.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 10,
+      "name": "Asus ROG RYUJIN III 360 ARGB AIO",
+      "description": "High-performance air cooler for optimal thermal management",
+      "price": 89.99,
+      "stock": 18,
+      "category": "Cooling",
+      "imageUrl": "ryujin-iii-360.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 11,
+      "name": "Cooler Master Hyper 212 Spectrum V3",
+      "description": "Budget-friendly air cooler with good performance",
+      "price": 34.99,
+      "stock": 22,
+      "category": "Cooling",
+      "imageUrl": "hyper-212-spectrum-v3.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 12,
+      "name": "ASUS ROG THOR 1200P2 GAMING 80 Plus Platinum 1200W",
+      "description": "Reliable 1200W power supply with 80 Plus Platinum certification",
+      "price": 109.99,
+      "stock": 15,
+      "category": "Power Supply",
+      "imageUrl": "rog-thor-1200p2.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 13,
+      "name": "Asus ROG Hyperion GR701 RGB",
+      "description": "Sleek mid-tower case with tempered glass side panel",
+      "price": 69.99,
+      "stock": 20,
+      "category": "Case",
+      "imageUrl": "rog-hyperion-gr701.jpg",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 14,
+      "name": "Razer Viper V2 Pro",
+      "description": "High-performance gaming mouse with customizable DPI",
+      "price": 49.99,
+      "stock": 25,
+      "category": "Peripherals",
+      "imageUrl": "viper-v2-pro.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 15,
+      "name": "Razer BlackWidow V4 Pro RGB Mechanical Keyboard",
+      "description": "Mechanical gaming keyboard with RGB backlighting",
+      "price": 129.99,
+      "stock": 10,
+      "category": "Peripherals",
+      "imageUrl": "blackwidow-v4-pro.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 16,
+      "name": "LG 32EP950-B UltraFine OLED Pro 4K",
+      "description": "32-inch 4K monitor with excellent color accuracy",
+      "price": 399.99,
+      "stock": 5,
+      "category": "Monitor",
+      "imageUrl": "lg-32-inch.jpg",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 17,
+      "name": "HP OMEN 24 165Hz FHD IPS",
+      "description": "Gaming monitor with 165Hz refresh rate and 1ms response time",
+      "price": 279.99,
+      "stock": 14,
+      "category": "Monitor",
+      "imageUrl": "hp-omen-24.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 18,
+      "name": "Asus XONAR AE",
+      "description": "High-quality external sound card for enhanced audio",
+      "price": 149.99,
+      "stock": 8,
+      "category": "Audio",
+      "imageUrl": "Asus XONAR AE.jpg",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 19,
+      "name": "Asus ROG Rapture GT-AX11000 Pro",
+      "description": "WiFi 6 router for fast and stable internet connection",
+      "price": 129.99,
+      "stock": 12,
+      "category": "Networking",
+      "imageUrl": "rog-rapture-gt-ax11000-pro.webp",
+      "rating": 5,
+      "reviews": 100
+    },
+    {
+      "id": 20,
+      "name": "Elgato Stream Deck",
+      "description": "Advanced live production controller for streamers",
+      "price": 149.99,
+      "stock": 10,
+      "category": "Peripherals",
+      "imageUrl": "elgato-stream-deck-mk2.webp",
+      "rating": 5,
+      "reviews": 100
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "name": "Intel 14th Gen Core i9 14900K",
+      "price": 499.99,
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "name": "TEAM XTREEM ARGB 48GB (2x24GB) 8000MHz DDR5",
+      "price": 349.99,
+      "quantity": 1
+    }
+  ]
+}

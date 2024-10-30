@@ -1,0 +1,29 @@
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.cart-summary {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.cart-summary p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.checkout-container {
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* Toast Notification Styling */
+.toast-container {
+  z-index: 1080;
+}
+
+.toast {
+  opacity: 1;
+}
